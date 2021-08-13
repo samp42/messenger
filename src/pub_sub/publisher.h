@@ -1,18 +1,17 @@
-/*
-Publisher for pub-sub design pattern
-
-Use this to describe an publisher - or the object being suberved, for example:
-- a sensor's value is suberved over time
-- the commands queue being suberved for commands to execute
-- etc.
-
-The publisher has the option of having a strong reference to the subscriber, meaning that
-it makes sure the subscriber has acknowledged the message. If not needed, a weak reference
-can be used.
-
-Use the publisher by making a class inherit from the actor class
-
-*/
+/**
+ * Publisher for pub-sub design pattern
+ *
+ * Use this to describe an publisher - or the object being suberved, for example:
+ * 	 - a sensor's value is suberved over time
+ *   - the commands queue being suberved for commands to execute
+ *   - etc.
+ *
+ * The publisher has the option of having a strong reference to the subscriber, meaning that
+ * it makes sure the subscriber has acknowledged the message. If not needed, a weak reference
+ * can be used.
+ *
+ * Use the publisher by making a class inherit from the actor class
+ */
 
 #pragma once
 
