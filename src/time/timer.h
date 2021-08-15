@@ -14,14 +14,14 @@
 namespace messenger {
 namespace time {
 
-struct Timer {
+class Timer {
 
 	// start time
 	// pointer to duration
 
-	// end time (call destructor) or just call destructor outside or do nothing
+	// end time (call declasor) or just call destructor outside or do nothing
 
-	// constructs timer with given time resolution (units)
+	// conclass timer with given time resolution (units)
 	Timer() {}
 	
 	// pointer to duration = timer duration

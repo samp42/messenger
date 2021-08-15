@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
-#include "src/util/pub_sub/publisher.h"
-#include "src/util/pub_sub/subscriber.h"
-#include "src/util/pub_sub/subscriber_log.h"
-#include "src/util/pub_sub/subscription.h"
+#include "src/pub_sub/publisher.h"
+#include "src/pub_sub/subscriber.h"
+#include "srcp/ub_sub/subscriber_log.h"
+#include "src/pub_sub/subscription.h"
 #include <string>
 
 namespace {
