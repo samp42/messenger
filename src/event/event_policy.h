@@ -13,7 +13,7 @@ namespace messenger {
 namespace event {
 
 struct EventPolicy {
-    static inline EventType GetEvent(const BotxEvent &e) { return e.eventType_; }
+    static inline EventType GetEvent(const MessengerEvent &e) { return e.eventType_; }
 };
 
 } // namespace event

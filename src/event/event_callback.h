@@ -14,15 +14,16 @@
 namespace messenger {
 namespace event {
 
-	struct EventCallback{
-    	std::function<void(util::Subscriber *, void *)> callback_;
+struct EventCallback{
+    std::function<void(pubsub::Subscriber *, void *)> callback_;
 
-    	EventCallback(std::function<void(util::Subscriber *, void *)> callback) : callback_(callback) {}
+    EventCallback(std::function<void(pubsub::Subscriber *, void *)> callback) :
+        callback_(callback) {}
 
-    	operator()() {
-        	callback_();
-    	}
-	};
+    operator()() {
+        callback_();
+    }
+};
 
 } // namespace event
 } // namespace messenger
