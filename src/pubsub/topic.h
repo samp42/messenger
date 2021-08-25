@@ -6,6 +6,10 @@
 
 #pragma once
 
+#include <unordered_set>
+
+#include "subscription.h"
+
 #ifndef TOPIC_H_
 #define TOPIC_H_
 
@@ -13,14 +17,22 @@ namespace messenger {
 namespace pubsub {
 
 class Topic {
-	private:
-		
+    private:
+        // list of subscriptions 
+        std::unordered_set<Subscription> subscriptions_;
 
-	public:
-		Topic() {}
+    public:
+	Topic();
 
-		// 
-		void UpdateSubscriber();
+        // add subscription to subscriptions_
+        void AddSubscription(const Subscription &subscription);
+
+        // remove subscription
+        // return if operation was succesful
+        bool RemoveSubscription(const Subscription &subscription);
+
+	// 
+	void NotifySubscriber();
 };
 
 } // namespace pubsub
