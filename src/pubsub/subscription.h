@@ -23,7 +23,7 @@ struct Subscription {
 
     Subscription(const Subscriber *subscriber, event::EventType eventType) : subscriber_(std::make_shared<Subscriber>(subscriber)), eventType_(eventType) {}
 
-    // necessary of insertion in set (see topic.h and subscription_comparator.h)
+    // necessary for insertion in set (see topic.h and subscription_comparator.h)
     bool operator ==(const Subscription &subscription) const {
         return this->(*subscriber) == subscription.(*subscriber)
             && this->eventType == subscription.eventType;
